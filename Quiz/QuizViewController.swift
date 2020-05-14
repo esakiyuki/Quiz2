@@ -23,17 +23,21 @@ class QuizViewController: UIViewController {
     @IBOutlet var choiceButtons2: UIButton!
     @IBOutlet var choiceButtons3: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //------------------------ここから下にクイズを書く------------------------//
         quizArray.append(["Life is Tech!のロゴTシャツにない色は？", "赤", "オレンジ", "黄色", 2])
         quizArray.append(["あつまれどうぶつの森の発売日は？", "３月２０日", "１月１０日", "５月５日", 1])
         //------------------------ここから上にクイズを書く------------------------//
-
-        choiceQuiz()
         
         quizArray.shuffle()
+        
+        choiceQuiz()
+        
+//        quizArray.shuffle()
     }
     
     func choiceQuiz() {
